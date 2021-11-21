@@ -1,0 +1,131 @@
+{
+    "zabbix_export": {
+        "version": "6.0",
+        "date": "2021-11-21T16:44:36Z",
+        "groups": [
+            {
+                "uuid": "856a7b67ad3f413a8f9a3997161986f8",
+                "name": "Google Play"
+            }
+        ],
+        "templates": [
+            {
+                "uuid": "225b2da44f5941b0b798ba4d4ed712ff",
+                "template": "Google Play Discovery",
+                "name": "Google Play Discovery",
+                "groups": [
+                    {
+                        "name": "Google Play"
+                    }
+                ],
+                "discovery_rules": [
+                    {
+                        "uuid": "68049e3bb3b748bc947a771fdbc2b739",
+                        "name": "Descoberta Google Play Store",
+                        "type": "EXTERNAL",
+                        "key": "DiscoveryGooglePlay.py",
+                        "delay": "5m",
+                        "item_prototypes": [
+                            {
+                                "uuid": "96a78c1cef15462283e76163156dad1e",
+                                "name": "Quantidade de Avaliac\u00f5es : {#APP_LABEL}",
+                                "type": "EXTERNAL",
+                                "key": "googleplay.py[{#APP_ID},\"Avaliacoes\"]",
+                                "delay": "5m",
+                                "history": "7d",
+                                "tags": [
+                                    {
+                                        "tag": "Mobile",
+                                        "value": "Google Play"
+                                    }
+                                ]
+                            },
+                            {
+                                "uuid": "64c547e0ee7b433c9c1250acc25ee27a",
+                                "name": "Nota da Aplica\u00e7\u00e3o : {#APP_LABEL}",
+                                "type": "EXTERNAL",
+                                "key": "googleplay.py[ {#APP_ID},\"Nota\"]",
+                                "delay": "5m",
+                                "value_type": "FLOAT",
+                                "tags": [
+                                    {
+                                        "tag": "Mobile",
+                                        "value": "Google Play"
+                                    }
+                                ]
+                            },
+                            {
+                                "uuid": "cf9a1e2824654816aab25641afc57a8f",
+                                "name": "Vers\u00e3o da Aplica\u00e7\u00e3o :  {#APP_LABEL}",
+                                "type": "EXTERNAL",
+                                "key": "googleplay.py[{#APP_ID},\"Versao\"]",
+                                "delay": "5m",
+                                "history": "7d",
+                                "trends": "0",
+                                "value_type": "TEXT",
+                                "tags": [
+                                    {
+                                        "tag": "Mobile",
+                                        "value": "Google Play"
+                                    }
+                                ]
+                            }
+                        ],
+                        "graph_prototypes": [
+                            {
+                                "uuid": "76776ca2e7b141698eac3642f3dc29c1",
+                                "name": "Nota da Aplica\u00e7\u00e3o : {#APP_LABEL}",
+                                "ymin_type_1": "ITEM",
+                                "ymin_item_1": {
+                                    "host": "Google Play Discovery",
+                                    "key": "googleplay.py[ {#APP_ID},\"Nota\"]"
+                                },
+                                "ymax_type_1": "ITEM",
+                                "ymax_item_1": {
+                                    "host": "Google Play Discovery",
+                                    "key": "googleplay.py[ {#APP_ID},\"Nota\"]"
+                                },
+                                "graph_items": [
+                                    {
+                                        "sortorder": "1",
+                                        "drawtype": "GRADIENT_LINE",
+                                        "color": "FFBF00",
+                                        "item": {
+                                            "host": "Google Play Discovery",
+                                            "key": "googleplay.py[ {#APP_ID},\"Nota\"]"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "uuid": "65766dcff9b84722b62754d9637df3bc",
+                                "name": "Quantidade de Avaliac\u00f5es : {#APP_LABEL}",
+                                "ymin_type_1": "ITEM",
+                                "ymin_item_1": {
+                                    "host": "Google Play Discovery",
+                                    "key": "googleplay.py[{#APP_ID},\"Avaliacoes\"]"
+                                },
+                                "ymax_type_1": "ITEM",
+                                "ymax_item_1": {
+                                    "host": "Google Play Discovery",
+                                    "key": "googleplay.py[{#APP_ID},\"Avaliacoes\"]"
+                                },
+                                "graph_items": [
+                                    {
+                                        "sortorder": "1",
+                                        "drawtype": "GRADIENT_LINE",
+                                        "color": "FFBF00",
+                                        "item": {
+                                            "host": "Google Play Discovery",
+                                            "key": "googleplay.py[{#APP_ID},\"Avaliacoes\"]"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

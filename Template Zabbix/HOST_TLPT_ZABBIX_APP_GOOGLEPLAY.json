@@ -1,0 +1,34 @@
+{
+    "zabbix_export": {
+        "version": "6.0",
+        "date": "2021-11-21T16:43:46Z",
+        "groups": [
+            {
+                "uuid": "856a7b67ad3f413a8f9a3997161986f8",
+                "name": "Google Play"
+            }
+        ],
+        "hosts": [
+            {
+                "host": "Google Play",
+                "name": "Google Play",
+                "templates": [
+                    {
+                        "name": "Google Play Discovery"
+                    }
+                ],
+                "groups": [
+                    {
+                        "name": "Google Play"
+                    }
+                ],
+                "interfaces": [
+                    {
+                        "interface_ref": "if1"
+                    }
+                ],
+                "inventory_mode": "DISABLED"
+            }
+        ]
+    }
+}
