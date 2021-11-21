@@ -6,7 +6,7 @@ Acompanhe as Avaliações, Notas e Versão dos seus Apps publicados na Google Pl
 
       ATENÇÃO: Ao utilizar este script, atente-se quanto a frequencia de execução, pois o uso 
                muito recorrente poderá acarretar restrições de acessos pelo proprietário 
-	       do site/Loja.
+	           do site/Loja.
 
 <img src="https://github.com/JeffersonARuiz/Zabbix_Grafana_GooglePlay/blob/main/Dashboard.png" />
 
